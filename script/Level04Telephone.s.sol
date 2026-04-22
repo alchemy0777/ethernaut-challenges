@@ -2,7 +2,8 @@
 pragma solidity ^0.8.13;
 
 import {Script} from "forge-std/Script.sol";
-import {Telephone, TelephoneAttacker} from "../src/Level04Telephone.sol";
+import {Telephone} from "../src/levels/Level04Telephone.sol";
+import {TelephoneAttacker} from "../src/attacks/Level04Telephone_Attack.sol";
 
 contract TelephoneScript is Script {
     Telephone public telephone;
