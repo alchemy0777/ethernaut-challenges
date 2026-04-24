@@ -1,4 +1,3 @@
-// Copy from https://ethernaut.openzeppelin.com/level/5
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 

